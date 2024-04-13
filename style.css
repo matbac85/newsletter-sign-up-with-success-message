@@ -112,8 +112,7 @@ label {
   background-color: rgba(255, 97, 85, 0.15);
 }
 
-span,
-label {
+span {
   color: var(--secondary);
   font-weight: var(--fw-bold);
   font-size: 1rem;

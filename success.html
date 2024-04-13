@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./success.js" defer></script>
+    <title>Success page</title>
+  </head>
+  <body>
+    <main>
+      <article class="b-card-success">
+        <div class="e-card__content">
+          <img
+            src="./assets/images/icon-success.svg"
+            alt=""
+            class="e-card__image"
+          />
+          <h1 class="e-card__title">Thanks for subscribing!</h1>
+          <p class="e-card__text">
+            A confirmation email has been sent to <span id="e-email"></span>.
+            Please open it and click the button inside to confirm your
+            subscription.
+          </p>
+        </div>
+        <button class="e-card__button" id="e-close-button">
+          Dismiss message
+        </button>
+      </article>
+    </main>
+  </body>
+</html>

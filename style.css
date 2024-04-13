@@ -1,0 +1,258 @@
+/* CSS RESET */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* MY CSS */
+
+:root {
+  --primary: hsl(4, 100%, 67%);
+  --secondary: hsl(234, 29%, 20%);
+  --neutral-800: hsl(235, 18%, 26%);
+  --neutral-500: hsl(231, 7%, 60%);
+  --neutral-100: hsl(0, 0%, 100%);
+  --fw-bold: 700;
+  --fw-reg: 400;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.b-illustration {
+  min-height: 17.75rem;
+  max-width: 25rem;
+  background-image: url(./assets/images/illustration-sign-up-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.b-content {
+  margin: 2.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  max-width: 23.5rem;
+}
+
+.e-content__text,
+.e-content__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  color: var(--secondary);
+  font-weight: var(--fw-bold);
+  font-size: 0.75rem;
+}
+
+.error {
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+  font-weight: var(--fw-bold);
+  font-size: 0.75rem;
+}
+
+.input-error {
+  color: var(--primary);
+  border-color: var(--primary);
+  background-color: rgba(255, 97, 85, 0.15);
+}
+
+span,
+label {
+  color: var(--secondary);
+  font-weight: var(--fw-bold);
+  font-size: 1rem;
+  line-height: 150%;
+}
+
+input {
+  display: block;
+  min-width: 100%;
+}
+
+.e-content__title,
+.e-card__title {
+  font-size: clamp(2.5rem, 2.1479rem + 1.5023vw, 3.5rem);
+  font-weight: var(--fw-bold);
+  line-height: 100%;
+}
+
+.e-content__subtitle,
+.e-content__feature,
+.e-card__text {
+  font-size: 1rem;
+  font-weight: var(--fw-reg);
+  line-height: 150%;
+}
+
+.e-content__title,
+.e-content__subtitle,
+.e-content__feature,
+input::placeholder,
+.e-card__text {
+  color: var(--secondary);
+}
+
+.e-content__features {
+  all: unset;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.e-content__feature {
+  display: flex;
+  gap: 1rem;
+}
+
+input {
+  padding: 1rem 1.5rem;
+  border: 1px solid rgba(25, 24, 43, 0.25);
+  border-radius: 0.5rem;
+}
+
+input:focus {
+  outline: solid 1px var(--secondary);
+  border-color: transparent;
+  color: var(--secondary);
+}
+
+input::placeholder {
+  color: rgba(25, 24, 43, 0.25);
+}
+
+input::placeholder,
+button {
+  border-radius: 0.5rem;
+}
+
+button {
+  background-color: var(--secondary);
+  color: var(--neutral-100);
+  font-size: 1rem;
+  font-weight: var(--fw-bold);
+  line-height: 150%;
+  text-align: center;
+  padding: 1rem 0;
+  border: 0;
+  cursor: pointer;
+}
+
+button:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 106, 58, 1) 0%,
+    rgba(255, 82, 123, 1) 100%
+  );
+}
+
+/* SUCCESS MESSAGE */
+
+.b-card-success {
+  display: flex;
+  flex-direction: column;
+  gap: 16.4375rem;
+  margin: 9.3125rem 1.5rem 2.5rem 1.5rem;
+  max-width: 31.5rem;
+}
+
+.e-card__image {
+  margin-bottom: 2.5rem;
+}
+
+.e-card__title {
+  margin-bottom: 1.5rem;
+}
+
+.e-content__label {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: 37rem) {
+  main {
+    background-color: var(--secondary);
+  }
+
+  .b-card-success {
+    background-color: var(--neutral-100);
+    padding: 3rem 4rem 4rem 4rem;
+    border-radius: 2.25rem;
+    gap: 2.5rem;
+    margin: 0;
+  }
+
+  .b-card {
+    background-color: var(--neutral-100);
+    display: flex;
+    flex-direction: row-reverse;
+    border-radius: 2.25rem;
+  }
+
+  .b-illustration {
+    background-image: url(./assets/images/illustration-sign-up-desktop.svg);
+    margin: 1.5rem 1.5rem 1.5rem 4rem;
+  }
+
+  .b-content {
+    margin-left: 4rem;
+    margin-right: 0;
+    justify-content: center;
+  }
+}
